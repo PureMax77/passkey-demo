@@ -1,0 +1,14 @@
+{
+  "name": "passkey-demo-server",
+  "version": "1.0.0",
+  "description": "Passkey 데모 백엔드 서버",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  }
+}
