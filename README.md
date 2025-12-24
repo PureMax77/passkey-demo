@@ -212,30 +212,22 @@ base64urlToBuffer(string)   // Base64URL 문자열 → ArrayBuffer
 
 ### 실제 프로덕션에서 추가해야 할 것들
 
-1. **서명 검증**
-   - 현재: credential 존재 여부만 확인
-   - 필요: 공개키로 서명 검증 (ECDSA, RSA)
-   
-2. **데이터베이스**
+1. **데이터베이스**
    - 현재: 메모리 저장 (서버 재시작 시 삭제)
    - 필요: PostgreSQL, MongoDB 등 영구 저장소
 
-3. **세션 관리**
+2. **세션 관리**
    - 필요: JWT 토큰, 세션 쿠키, Refresh token
 
-4. **Rate Limiting**
+3. **Rate Limiting**
    - 필요: 무차별 대입 공격 방지
 
-5. **HTTPS**
+4. **HTTPS**
    - 필요: TLS/SSL 인증서 (Let's Encrypt)
 
-6. **Attestation 검증**
+5. **Attestation 검증**
    - 현재: `attestation: 'none'`
    - 필요: 하드웨어 인증기 검증 (선택사항)
-
-7. **Counter 검증**
-   - 현재: 단순 증가
-   - 필요: Replay attack 방지 로직
 
 ### API 엔드포인트
 
@@ -304,16 +296,4 @@ base64urlToBuffer(string)   // Base64URL 문자열 → ArrayBuffer
 ## 📝 라이선스
 
 MIT License - 자유롭게 사용하세요!
-
-## 🤝 기여
-
-이슈와 Pull Request를 환영합니다!
-
----
-
-**만든이**: Passkey 데모 프로젝트
-**버전**: 1.0.0
-**최종 수정**: 2025년 12월
-
-즐거운 코딩 되세요! 🚀
 
